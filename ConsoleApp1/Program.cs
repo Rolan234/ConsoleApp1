@@ -19,16 +19,35 @@ namespace ConsoleApp1
             //}
             //Console.Read();
 
-            int count = 0;
+            //int count = 0;
+            //Random random = new Random();
+            //for (int i = 1; i <= 15; i++)
+            //{
+            //    double x = -20 + 50 * random.NextDouble();
+            //    Console.WriteLine(x);
+            //    if (x > 0)
+            //    { count++; }
+            //}
+            //Console.WriteLine($"Кол-во положительных чисел ={count}");
+
             Random random = new Random();
-            for (int i = 1; i <= 15; i++)
+
+            Console.WriteLine("Случайные числа");
+            for (int i = 0; i < 12; i++)
             {
-                double x = -20 + 50 * random.NextDouble();
-                Console.WriteLine(x);
-                if (x>0)
-                { count++; }
+                dobule number = random.NextDouble() * (5 - (-5)) + (-5);
+                Console.WriteLine(number + "");
+                if (number < 0)
+                {
+                    Console.WriteLine(" - отрицательное число");
+                }
+                else if (number > 0)
+                {
+                    Console.WriteLine("- положительное число");
+
+                }
             }
-            Console.WriteLine($"Кол-во положительных чисел ={count}");
+
             Console.Read();
         }
     }
